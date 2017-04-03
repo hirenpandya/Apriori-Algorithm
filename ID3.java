@@ -7,7 +7,7 @@ import java.io.*;
  * 
  */
 
-public class ID3 {
+public class Apriori {
     public static HashMap <String,String> permutations = new LinkedHashMap<>();
 
     public static void main(String[] args)throws IOException  {
