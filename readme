@@ -1,0 +1,69 @@
+Please open all the files including source code and output "Rules" file in notepad or any other text editor to see output in more better and convinent way. 
+
+Note: I have also implemented bonus part (Pruning).
+
+The implementation of Apriori algorithm has been done in Java
+
+The assign3 folder contains two things
+
+1) ID3.java file which contains the source code
+
+2) Readme file which contains all details about the source code file
+
+When you will run ID3.Java file, one file named "Rules" will be generated which contains all the rules for given input data file.
+
+About Source code : ID3.java contains all the operations required to generate mining rules
+
+The detail view of my source code is below:  Run (ID3.Java) file 
+The program will ask user for input data file, minimum support and minimum confidence.
+Step 1 : Generate first itemset
+
+Step 2 : Generate first frequent item set (the method to generate frequent itemset also does pruning)
+
+Step 3 : Generate candidate itemset (2nd itemset, 3rd itemset,...,etc.)
+	 candidate_itemset() method is  called to generate candidate itemset for each iteration 
+
+Step 4 : Generate frequent itemset with pruning (2nd frequent itemset, 3rd frequent itemset,...,etc)
+	 get_frequent_itemset() methos is called to generate frequent itemset for each iteration (i.e. for 2 itemset, 3 itemset, etc.). This 		 method uses minimum support to apply pruning.
+
+	 frequent_itemset hash contains all the frequent itemset with their count.
+
+	Description about Bonus part Pruning : get_frequent_itemset() method directly filters out candiate based on minimum support. If support 	for particular candidate is grater than minimum support, then only it is considered for candidate itemset for next iteration
+
+Step 5 : Convert word to number for applying permutation function. This is required while generting rules from frequent item set
+	 word_to_number hash maps the word with number.
+
+Step 6 : Apply permutation() function
+
+Step 7 : After getting combinations from permutation function, convert number back to original text word using word_to_number hash
+
+Step 8 : After getting all permutation-combinations for frequent itemsets, the rules are filtered and generated based on their respective 		 confidence value. Finally each rule, minimum support and confidence is written into rule file. So "Rules" file contains all generated 		 rules with minimum support and confidence.
+
+													
+Structure of the Code								
+													
+Input:- Data file, Minimum support rate, Confidence value
+These three values should be provided by user
+
+Processing flow:- 
+1) Get Inut data file, Minimum support rate, confidence value (Both Minimum support and Confidence should be between 0.0 to 1.0)
+2) Make first candidate itemset (using method candidate_itemset) and first frequent itemset with pruning (Bonus part) (using     		  get_frequent_itemset method)
+3) Generate K-item candidate set (using method candidate_itemset) and K-Frequent itemset with pruning (using method get_frequent_itemset)
+4) Generate all possible permutation-combination from frequent itemset hash (get_permutation method)
+5) Generate Rules 
+7) print and store into "Rules" file
+
+Output:- All rules are stored in "Rules" text file
+
+				
+How to compile and run code
+													
+1) Compile the ID3.java file using below command
+   javac ID3.java
+
+2) Run ID3.Java file using below command
+   java ID3
+
+Output is stored in "Rules" file.
+
+
