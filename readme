@@ -1,20 +1,18 @@
 Please open all the files including source code and output "Rules" file in notepad or any other text editor to see output in more better and convinent way. 
 
-Note: I have also implemented bonus part (Pruning).
-
 The implementation of Apriori algorithm has been done in Java
 
 The assign3 folder contains two things
 
-1) ID3.java file which contains the source code
+1) Apriori.java.java file which contains the source code
 
 2) Readme file which contains all details about the source code file
 
-When you will run ID3.Java file, one file named "Rules" will be generated which contains all the rules for given input data file.
+When you will run Apriori.java.Java file, one file named "Rules" will be generated which contains all the rules for given input data file.
 
-About Source code : ID3.java contains all the operations required to generate mining rules
+About Source code : Apriori.java.java contains all the operations required to generate mining rules
 
-The detail view of my source code is below:  Run (ID3.Java) file 
+The detail view of my source code is below:  Run (Apriori.java.Java) file 
 The program will ask user for input data file, minimum support and minimum confidence.
 Step 1 : Generate first itemset
 
@@ -58,11 +56,11 @@ Output:- All rules are stored in "Rules" text file
 				
 How to compile and run code
 													
-1) Compile the ID3.java file using below command
-   javac ID3.java
+1) Compile the Apriori.java.java file using below command
+   javac Apriori.java.java
 
-2) Run ID3.Java file using below command
-   java ID3
+2) Run Apriori.java.Java file using below command
+   java Apriori.java
 
 Output is stored in "Rules" file.
 
